@@ -25,7 +25,7 @@
         {
           "id": "dailyChallenge",
           "name": "Daily Challenge",
-          "when": "false"
+          "when": "leetup.userInfo == true"
         }
       ]
     },
@@ -42,7 +42,7 @@
       {
         "view": "profile",
         "contents": "To use LeetUp, please login with your [leetcode](https://leetcode.com/) account.\n[Login](command:leetup.login)",
-        "when": "true"
+        "when": "leetup.userInfo == false"
       }
     ],
     "commands": [
