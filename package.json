@@ -12,18 +12,51 @@
   ],
   "activationEvents": [
     "onStartupFinished",
-    "onCommand:leetup.submit"
+    "onView:nodeDependencies"
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "views": {
+      "leetup": [
+        {
+          "id": "profile",
+          "name": "Profile"
+        },
+        {
+          "id": "dailyChallenge",
+          "name": "Daily Challenge",
+          "when": "false"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "leetup",
+          "title": "LeetUp",
+          "icon": "assets/image/dep.svg"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "profile",
+        "contents": "To use LeetUp, please login with your [leetcode](https://leetcode.com/) account.\n[Login](command:leetup.login)",
+        "when": "true"
+      }
+    ],
     "commands": [
       {
         "command": "leetup.submit",
-        "title": "Submit"
+        "title": "LeetCode Submit"
       },
       {
-        "command": "leetup.daily",
-        "title": "Daily"
+        "command": "leetup.login",
+        "title": "LeetCode Login"
+      },
+      {
+        "command": "leetup.logout",
+        "title": "LeetCode Logout"
       }
     ]
   },
