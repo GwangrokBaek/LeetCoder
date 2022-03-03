@@ -19,8 +19,8 @@
     "views": {
       "leetup": [
         {
-          "id": "profile",
-          "name": "Profile"
+          "id": "home",
+          "name": "Home"
         },
         {
           "id": "dailyChallenge",
@@ -40,8 +40,8 @@
     },
     "viewsWelcome": [
       {
-        "view": "profile",
-        "contents": "To use LeetUp, please login with your [leetcode](https://leetcode.com/) account.\n[Login](command:leetup.login)",
+        "view": "home",
+        "contents": "To use LeetCoder, please sign in with your account.\n[Sign in](command:leetup.SignIn)\nIf you fail to sign in with accounts, then [use cookie from browser](https://www.naver.com).\n",
         "when": "leetup.userInfo == false"
       }
     ],
@@ -51,8 +51,8 @@
         "title": "LeetCode Submit"
       },
       {
-        "command": "leetup.login",
-        "title": "LeetCode Login"
+        "command": "leetup.SignIn",
+        "title": "LeetCode SignIn"
       },
       {
         "command": "leetup.logout",
