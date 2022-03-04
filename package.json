@@ -1,7 +1,7 @@
 {
-  "name": "leetup",
+  "name": "leetcoder",
   "publisher": "GwangrokBaek",
-  "displayName": "LeetUp",
+  "displayName": "LeetCoder",
   "description": "vscode extension for leetcode",
   "version": "0.0.1",
   "engines": {
@@ -17,7 +17,7 @@
   "main": "./out/extension.js",
   "contributes": {
     "views": {
-      "leetup": [
+      "leetcoder": [
         {
           "id": "home",
           "name": "Home"
@@ -25,15 +25,15 @@
         {
           "id": "dailyChallenge",
           "name": "Daily Challenge",
-          "when": "leetup.userInfo == true"
+          "when": "leetcoder.userInfo == true"
         }
       ]
     },
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "leetup",
-          "title": "LeetUp",
+          "id": "leetcoder",
+          "title": "LeetCoder",
           "icon": "assets/image/dep.svg"
         }
       ]
@@ -41,22 +41,22 @@
     "viewsWelcome": [
       {
         "view": "home",
-        "contents": "To use LeetCoder, please sign in with your account.\n[Sign in](command:leetup.SignIn)\nIf you fail to sign in with accounts, then [use cookie from browser](https://www.naver.com).\n",
-        "when": "leetup.userInfo == false"
+        "contents": "To use LeetCoder, please sign in with your account.\n[Sign in](command:leetcoder.signIn)\nFor now, LeetCoder only supports [LeetCode](https://leetcode.com/).\nBut in the future, [Baekjoon](https://www.acmicpc.net/) will also be supported.",
+        "when": "leetcoder.userInfo == false"
       }
     ],
     "commands": [
       {
-        "command": "leetup.submit",
+        "command": "leetcoder.submit",
         "title": "LeetCode Submit"
       },
       {
-        "command": "leetup.SignIn",
-        "title": "LeetCode SignIn"
+        "command": "leetcoder.signIn",
+        "title": "LeetCode Sign In"
       },
       {
-        "command": "leetup.logout",
-        "title": "LeetCode Logout"
+        "command": "leetcoder.signOut",
+        "title": "LeetCode Sign Out"
       }
     ]
   },
